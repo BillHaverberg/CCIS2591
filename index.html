@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CCIS 2591 Project 3</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="project3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+<h1> Webpage developed by Bill Haverberg</h1>
+<h2>Contact Relationship Management(CRM) with JavaScript Objects</h2>
+
+<p>The CRM System contains the following contacts:</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+    
+    
+<script>
+// Create an object:
+var Contact1 = {
+  strFirst: "Bill",
+  strLast : "Haverberg",
+  intID   : 111,
+  street  : "5450 34th Ave S #104",
+  city    : "Minneapolis",
+  state   : "MN",
+  zip     : "554517",
+  phone   : "(612) 600-0976",
+  email   : "haverber@visi.com",
+  fullName: function() {
+    return this.strFirst +" " + this.strLast + "<br />";
+  },
+  fullAddress: function() {
+    return this.street + ", " + this.city + " " + this.state +"  " + this.zip + "<br />";
+  },
+  fullContact: function() {
+    return this.phone + " "+this.email+"<br />";
+  },
+  fullRecord: function() {
+      return this.intID+" "+this.fullName()+this.fullAddress()+this.fullContact();
+  }
+};
+  var Contact2 = {
+  strFirst: "Sam",
+  strLast : "Espana",
+  intID   : 222,
+  street  : "222 Elm St",
+  city    : "Minneapolis",
+  state   : "MN",
+  zip     : "55401",
+  phone   : "(612) 555-1234",
+  email   : "sam@gmail.com",
+  fullName: function() {
+    return this.strFirst +" " + this.strLast + "<br />";
+  },
+  fullAddress: function() {
+    return this.street + ", " + this.city + " " + this.state +"  " + this.zip + "<br />";
+  },
+  fullContact: function() {
+    return this.phone + " "+this.email+"<br />";
+  },
+  fullRecord: function() {
+      return this.intID+" "+this.fullName()+this.fullAddress()+this.fullContact();
+  }
+};
+var Contact3 = {
+  strFirst: "Daffy",
+  strLast : "Duck",
+  intID   : 333,
+  street  : "123 warner brothers rd",
+  city    : "Minneapolis",
+  state   : "MN",
+  zip     : "55401",
+  phone   : "(612) 555-2345",
+  email   : "daffy@wb.com",
+  fullName: function() {
+    return this.strFirst +" " + this.strLast + "<br />";
+  },
+  fullAddress: function() {
+    return this.street + ", " + this.city + " " + this.state +"  " + this.zip + "<br />";
+  },
+  fullContact: function() {
+    return this.phone + " "+this.email+"<br />";
+  },
+  fullRecord: function() {
+      return this.intID+" "+this.fullName()+this.fullAddress()+this.fullContact();
+  }
+
+};
+var Contact4 = {
+  strFirst: "Donald",
+  strLast : "Knuth",
+  intID   : 444,
+  street  : "123 pointer overflow ave",
+  city    : "Minneapolis",
+  state   : "MN",
+  zip     : "55401",
+  phone   : "(612) 555-3456",
+  email   : "dknuth@c.org",
+  fullName: function() {
+    return this.strFirst +" " + this.strLast + "<br />";
+  },
+  fullAddress: function() {
+    return this.street + ", " + this.city + " " + this.state +"  " + this.zip + "<br />";
+  },
+  fullContact: function() {
+    return this.phone + " "+this.email+"<br />";
+  },
+  fullRecord: function() {
+      return this.intID+" "+this.fullName()+this.fullAddress()+this.fullContact();
+  }
+};
+var Contact5 = {
+  strFirst: "Bugs",
+  strLast : "Bunny",
+  intID   : 555,
+  street  : "4456 Mayhem Avenue",
+  city    : "Minneapolis",
+  state   : "MN",
+  zip     : "55401",
+  phone   : "(612) 555-9999",
+  email   : "bugs@wb.com",
+  fullName: function() {
+    return this.strFirst +" " + this.strLast + "<br />";
+  },
+  fullAddress: function() {
+    return this.street + ", " + this.city + " " + this.state +"  " + this.zip + "<br />";
+  },
+  fullContact: function() {
+    return this.phone + " "+this.email+"<br />";
+  },
+  fullRecord: function() {
+      return this.intID+" "+this.fullName()+this.fullAddress()+this.fullContact();
+  }
+};
+document.getElementById("demo1").innerHTML = Contact1.fullRecord();
+document.getElementById("demo2").innerHTML = Contact2.fullRecord();
+document.getElementById("demo3").innerHTML = Contact3.fullRecord();
+document.getElementById("demo4").innerHTML = Contact4.fullRecord();
+document.getElementById("demo5").innerHTML = Contact5.fullRecord();
+</script>
+
+</body>
+</html>
+
+
+
