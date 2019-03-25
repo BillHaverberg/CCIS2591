@@ -1,24 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
 <head>
     <title>CCIS 2591 Project 3</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="project3.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="project3.css">
 </head>
 <body>
 <h1> Webpage developed by Bill Haverberg</h1>
 <h2>Contact Relationship Management(CRM) with JavaScript Objects</h2>
 
 <p>The CRM System contains the following contacts:</p>
-
-<p id="demo1"></p>
-<p id="demo2"></p>
-<p id="demo3"></p>
-<p id="demo4"></p>
-<p id="demo5"></p>
     
+<div>
+<span class="icon"><i class="material-icons">person</i></span> 
+<span class="id"><span id="id1"></span></span> 
+<span class="report"><span id="demo1"></span></span> 
+</div>
+<div>
+<span class="icon"><i class="material-icons">person</i></span> 
+<span class="id"><span id="id2"></span></span> 
+<span class="report"><span id="demo2"></span></span> 
+</div>
+<div>
+<span class="icon"><i class="material-icons">person</i></span> 
+<span class="id"><span id="id3"></span></span> 
+<span class="report"><span id="demo3"></span></span> 
+</div>
+<div>
+<span class="icon"><i class="material-icons">person</i></span> 
+<span class="id"><span id="id4"></span></span> 
+<span class="report"><span id="demo4"></span></span> 
+</div>
+<div>
+<span class="icon"><i class="material-icons">person</i></span> 
+<span class="id"><span id="id5"></span></span> 
+<span class="report"><span id="demo5"></span></span> 
+</div>
     
 <script>
 // Create an object:
@@ -42,7 +62,7 @@ var Contact1 = {
     return this.phone + " "+this.email+"<br />";
   },
   fullRecord: function() {
-      return this.intID+" "+this.fullName()+this.fullAddress()+this.fullContact();
+      return this.fullName()+this.fullAddress()+this.fullContact();
   }
 };
   var Contact2 = {
@@ -65,7 +85,7 @@ var Contact1 = {
     return this.phone + " "+this.email+"<br />";
   },
   fullRecord: function() {
-      return this.intID+" "+this.fullName()+this.fullAddress()+this.fullContact();
+      return this.fullName()+this.fullAddress()+this.fullContact();
   }
 };
 var Contact3 = {
@@ -88,7 +108,7 @@ var Contact3 = {
     return this.phone + " "+this.email+"<br />";
   },
   fullRecord: function() {
-      return this.intID+" "+this.fullName()+this.fullAddress()+this.fullContact();
+      return this.fullName()+this.fullAddress()+this.fullContact();
   }
 
 };
@@ -112,7 +132,7 @@ var Contact4 = {
     return this.phone + " "+this.email+"<br />";
   },
   fullRecord: function() {
-      return this.intID+" "+this.fullName()+this.fullAddress()+this.fullContact();
+      return this.fullName()+this.fullAddress()+this.fullContact();
   }
 };
 var Contact5 = {
@@ -135,13 +155,18 @@ var Contact5 = {
     return this.phone + " "+this.email+"<br />";
   },
   fullRecord: function() {
-      return this.intID+" "+this.fullName()+this.fullAddress()+this.fullContact();
+      return this.fullName()+this.fullAddress()+this.fullContact();
   }
 };
+document.getElementById("id1").innerHTML = Contact1.intID;
 document.getElementById("demo1").innerHTML = Contact1.fullRecord();
+document.getElementById("id2").innerHTML = Contact2.intID;
 document.getElementById("demo2").innerHTML = Contact2.fullRecord();
+document.getElementById("id3").innerHTML = Contact3.intID;
 document.getElementById("demo3").innerHTML = Contact3.fullRecord();
+document.getElementById("id4").innerHTML = Contact4.intID;
 document.getElementById("demo4").innerHTML = Contact4.fullRecord();
+document.getElementById("id5").innerHTML = Contact5.intID;
 document.getElementById("demo5").innerHTML = Contact5.fullRecord();
 </script>
 
